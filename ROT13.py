@@ -48,7 +48,14 @@ def transcriptar(texto):
   return textoTranscriptado
 
 def main():
-  pass
+  entrada = True
+  print("Digite o texto a ser transcriptado abaixo, caso queira terminar escreva '-1'")
+  while entrada != "-1":
+    entrada = input("\n\ntexto: ")
+    if entrada != "-1":
+      saida = transcriptar(entrada)
+      print("Transcrição: ",saida)
+  input("Aperte qualquer coisa para terminar")
 
 if __name__ == "__main__":
   main()
