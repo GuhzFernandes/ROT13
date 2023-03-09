@@ -1,4 +1,35 @@
-tabelaInterna = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+TabelaCaracteres = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+TabelaAcentosA = ['Á','À','Ã','Â']
+TabelaAcentosE = ['É','È','Ê']
+TabelaAcentosI = ['Í','Ì','Î']
+TabelaAcentosO = ['Ó','Ò','Õ','Ô']
+TabelaAcentosU = ['Ú','Ù','Û']
+
+def simplificar(texto):
+  caracteresSimplificados = []
+  texto = texto.upper()
+  for caractere in texto:
+    for acento in TabelaAcentosA:
+      if caractere == acento:
+        caractere = 'A'
+    for acento in TabelaAcentosE:
+      if caractere == acento:
+        caractere = 'E'
+    for acento in TabelaAcentosI:
+      if caractere == acento:
+        caractere = 'I'
+    for acento in TabelaAcentosO:
+      if caractere == acento:
+        caractere = 'O'
+    for acento in TabelaAcentosU:
+      if caractere == acento:
+        caractere = 'U'
+    if caractere == 'Ç':
+      caractere = 'C'
+
+    caracteresSimplificados.append(caractere)
+  return caracteresSimplificados
+
 
 def main():
   pass
