@@ -35,7 +35,7 @@ def transcriptar(texto):
   posicaoCaractere = 0
   textoTranscriptado = ''
   for caractere in caracteres:
-    if caractere == ' ' or caractere == '.' or caractere == ',' or caractere == '?' or caractere == '!' or caractere == '"' or caractere == '-' or caractere == "'":
+    if caractere == ' ' or caractere == '.' or caractere == ',' or caractere == ':' or caractere == ':' or caractere == '?' or caractere == '!' or caractere == '-' or caractere == '/' or caractere == '"' or caractere == "'":
         textoTranscriptado = textoTranscriptado + str(caractere)
     else:
       posicaoCaractere = TabelaCaracteres.index(caractere)
