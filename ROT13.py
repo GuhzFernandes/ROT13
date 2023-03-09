@@ -30,6 +30,22 @@ def simplificar(texto):
     caracteresSimplificados.append(caractere)
   return caracteresSimplificados
 
+def transcriptar(texto):
+  caracteres = simplificar(texto)
+  posicaoCaractere = 0
+  textoTranscriptado = ''
+  for caractere in caracteres:
+    if caractere == ' ' or caractere == '.' or caractere == ',' or caractere == '?' or caractere == '!' or caractere == '"' or caractere == '-' or caractere == "'":
+        textoTranscriptado = textoTranscriptado + str(caractere)
+    else:
+      posicaoCaractere = TabelaCaracteres.index(caractere)
+      if posicaoCaractere < 13:
+        posicaoCaractere = posicaoCaractere + 13
+        textoTranscriptado = textoTranscriptado + str(TabelaCaracteres[posicaoCaractere])
+      else:
+        posicaoCaractere = posicaoCaractere - 13
+        textoTranscriptado = textoTranscriptado + str(TabelaCaracteres[posicaoCaractere])
+  return textoTranscriptado
 
 def main():
   pass
